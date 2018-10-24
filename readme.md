@@ -26,10 +26,3 @@
 2. [ARIMA](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
 3. [Numpy](http://www.numpy.org/)
 4. [Pandas](https://pandas.pydata.org/)
-5. [Anaconda (Python based)]()
-6. [Deep Learning - Tensorflow (Python based)]()
-7. [scikit-learn (Python based)]()
-8. [Inferential & Predictive statistics]()
-9. [Data programming in R, C/C++, SAS, Python and Java]()
-10. [Big Data - Cloudera]()
-
