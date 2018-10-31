@@ -16,3 +16,8 @@
 4. Web browser engines, Chrome: v8, Firefox: SpiderMonkey
 5. VS Code
 6. Live Server
+
+
+
+## Resources
+1. [JavaScript Cheatsheet](https://htmlcheatsheet.com/js/)
