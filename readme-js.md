@@ -21,3 +21,5 @@
 
 ## Resources
 1. [JavaScript Cheatsheet](https://htmlcheatsheet.com/js/)
+2. [Youtube: JavaScript tutorial](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+3. [Eloquent JavaScript](http://eloquentjavascript.net/)
