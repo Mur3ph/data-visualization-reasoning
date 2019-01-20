@@ -39,3 +39,12 @@ function animation() {
             .attr("r", 40);
     };
 };
+
+function clickButton() {
+    d3.select('#btn')
+        .on('click', function () {
+            d3.select('body')
+                .append('h3')
+                .text('Today is a beautiful day!!');
+        });
+}
