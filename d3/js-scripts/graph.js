@@ -50,3 +50,17 @@ function createGraph() {
         .attr('class', 'x axis') // specify classes
         .call(xAxis);            // let the axis do its thing
 };
+
+function createCircle(){
+    var bodySelection = d3.select("#viz");
+
+    var svgSelection = bodySelection.append("svg")
+        .attr("width", 50)
+        .attr("height", 50);
+
+    var circleSelection = svgSelection.append("circle")
+        .attr("cx", 25)
+        .attr("cy", 25)
+        .attr("r", 25)
+        .style("fill", "purple");
+};
