@@ -43,7 +43,7 @@ function animation() {
 function clickButton() {
     d3.select('#btn')
         .on('click', function () {
-            d3.select('body')
+            d3.select('#message')
                 .append('h3')
                 .text('Today is a beautiful day!!');
         });
