@@ -8,11 +8,9 @@
 
 <body>
     <div id="viz"></div>
-    <div id="binding"></div>
     <script type="text/javascript">
 
         animation();
-        bindingData();
 
         function animation() {
             let sampleSVG = d3.select("#viz")
@@ -54,30 +52,6 @@
                     .duration(1000)
                     .attr("r", 40);
             };
-        };
-
-        function bindingData() {
-            let dataset = [];
-            var i = 0;
-
-            for (i = 0; i < 5; i++) {
-                dataset.push(Math.round(Math.random() * 100));
-            }
-
-            let bindingDataSVG = d3.select("#binding")
-                .append("svg")
-                .attr("width", 400)
-                .attr("height", 75);
-
-            bindingDataSVG.selectAll("circle")
-                .data(dataset)
-                .enter().append("circle")
-                .style("stroke", "gray")
-                .style("fill", "white")
-                .attr("height", 40)
-                .attr("width", 75)
-                .attr("x", function (d, i) { return i * 80 })
-                .attr("y", 20);
         };
 
     </script>

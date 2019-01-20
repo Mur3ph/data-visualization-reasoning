@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script> -->
+    <script type="text/javascript" src="api/d3.v4.min.js"></script>
+    <script type="text/javascript" src="js-scripts/graph.js"></script>
+</head>
+
+<body>
+    <div id="viz"></div>
+
+    <script type="text/javascript">
+        createGraph();
+
+        var bodySelection = d3.select("#viz");
+
+        var svgSelection = bodySelection.append("svg")
+            .attr("width", 50)
+            .attr("height", 50);
+
+        var circleSelection = svgSelection.append("circle")
+            .attr("cx", 25)
+            .attr("cy", 25)
+            .attr("r", 25)
+            .style("fill", "purple");
+
+    </script>
+
+</body>
+
+</html>
