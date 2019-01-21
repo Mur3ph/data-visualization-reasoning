@@ -31,7 +31,7 @@ function createSquare() {
 function positioningCirclesWithSVG() {
     var spaceCircles = [30, 70, 110];
 
-    var svgContainer = d3.select("body").append("svg")
+    var svgContainer = d3.select("#positioning").append("svg")
         .attr("width", 200)
         .attr("height", 200);
 
