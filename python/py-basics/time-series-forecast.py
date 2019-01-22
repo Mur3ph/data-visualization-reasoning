@@ -8,4 +8,4 @@ import statsmodels.tsa.stattools as ts
 from statsmodels.tsa.arima_model import ARIMA
 
 variables = pandas.read_csv('data/AirPassengers.csv')
-price = variables['price']
+print(variables.head())
