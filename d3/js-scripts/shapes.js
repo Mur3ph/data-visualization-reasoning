@@ -33,27 +33,44 @@ function positioningCirclesWithSVG() {
 
     var scores = [
         {
-          "name": "Andy",
-          "score": 30
+            "name": "Andy",
+            "score": 30
         },
         {
-          "name": "Beth",
-          "score": 70
+            "name": "Beth",
+            "score": 70
         },
         {
-          "name": "Evelyn",
-          "score": 110
+            "name": "Evelyn",
+            "score": 110
         }
-      ]
+    ]
 
-    var svgContainer = d3.select("#positioning").append("svg")
-        .attr("width", 200)
-        .attr("height", 200);
+    var svgContainer = d3
+        .select("#positioning")
+        .append("svg")
+        .attr("width", 800)
+        .attr("height", 800);
 
-    var circles = svgContainer.selectAll("circle")
+    var elem = svgContainer.selectAll("g")
+        .data(scores);
+
+    var elemEnter = elem
+        .enter()
+        .append("g")
+        .attr("transform", function (d) { return "translate(" + d.score + ",80)" })
+
+    var circles = elemEnter
+        .selectAll("circle")
         .data(scores)
         .enter()
         .append("circle");
+
+    var text = elemEnter
+        .selectAll("text")
+        .data(scores)
+        .enter()
+        .append("text");
 
     var circleAttributes = circles
         .attr("cx", function (d) { return d.score; })
@@ -68,4 +85,11 @@ function positioningCirclesWithSVG() {
             } else if (d.score === 110) { returnColor = "red"; }
             return returnColor;
         });
+
+    var textAttributes = text
+        .text(function (d) { return d.name; })
+        // .attr("cx", function (d) { return d.score; })
+        // .attr("cy", function (d) { return d.score; })
+        .style('text-anchor', 'middle');
 }
+
